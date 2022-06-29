@@ -10,11 +10,9 @@ import Banner from './component/Banner';
 import Footer from './component/Footer';
 import BXH from './component/BXH';
  
-import { Route, Switch, BrowserRouter as Router, useParams, Redirect, useLocation } from 'react-router-dom';
+import { Route, Switch, BrowserRouter as Router, Redirect } from 'react-router-dom';
 function App() {
-
   return (
-    
     <div>
       <Router>
         <Nav />

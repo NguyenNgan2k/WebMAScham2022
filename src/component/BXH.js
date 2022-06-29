@@ -6,7 +6,7 @@ function BXH (props) {
     const bxh = queryParams.get("bxh")
 
     return(
-        <section className="section rank" id="bangxephang">
+        <section className="section rank">
                 <div className="container">
                     <h2 className="section_title">
                         <span className="ora">
