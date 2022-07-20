@@ -9,7 +9,7 @@ function Tab2() {
                     </div>
                     <div className="prize_name f-bold">Dành cho tài khoản mới mở và đăng kí tham gia
                         MAScham sớm nhất.</div>
-                    <div className="prize_name f-bold">Xem chi tiết
+                    <div className="prize_name f-bold">Xem chi tiết 
                         <a href="#">
                             tại đây
                         </a>

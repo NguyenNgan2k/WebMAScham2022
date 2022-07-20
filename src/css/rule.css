@@ -63,3 +63,25 @@ h2.section_title {
      content: "-" ;
      margin-right: 10px;
 }
+
+.rule ul {
+    padding: 0;
+}
+
+.rule .bold {
+    font-weight: bold;
+}
+
+.rule .f-ita {
+    font-style: italic;
+}
+
+.rule .rule_list a {
+    color: #00427A !important;
+    text-decoration-line: underline !important;
+    margin-left: 5px;
+}
+
+.rule .rule_list a:hover{
+    color: #f58220 !important;
+}

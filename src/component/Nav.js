@@ -1,9 +1,11 @@
-import { useEffect, useRef } from 'react';
-import { NavLink, Route, BrowserRouter as Router, useLocation, Redirect } from 'react-router-dom';
+import { useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import {CgMenuRightAlt} from 'react-icons/cg'
+import call from "../assets/call.svg";
+import mail from "../assets/mail.svg";
+import logo2 from "../assets/logo2.svg";
 function Nav(props) {
     let { pathname } = useLocation();
-
-
     //sticky
     useEffect(() => {
         window.addEventListener('scroll', isSticky);
@@ -19,10 +21,24 @@ function Nav(props) {
 
     return (
         <header className="header" id="nav">
+            <div className="hd_top">
+                <div className="container">
+                    <div className="hd_right">
+                        <div className="hd_phone">
+                            <a href="#"><img className="img_icon" src={call}/>(+84) 2 8888 2 6868</a>
+                        </div>
+                        <div className="hd_email">
+                            <a href="#"><img className="img_icon" src={mail}/>info@vcsc.com.vn</a>
+                        </div>
+                        <button className="btn_account"><a href="#">MỞ TÀI KHOẢN</a></button>
+                        <button className="btn_gd"><a href="http://103.101.160.120:8888/vs/#/./login">GIAO DỊCH TRỰC TUYẾN</a></button>
+                    </div>
+                </div>
+            </div>
             <div className="container header_container">
                 <div className="header_logo">
                     <a href="#" className="logo_img">
-                        <img src="/assets/logo.png" />
+                        <img src={logo2} />
                     </a>
                 </div>
                 <div className="header_left">
@@ -58,23 +74,10 @@ function Nav(props) {
                                         Bảng xếp hạng
                                     </NavLink>
                                 </li>
-                                <li className="menu-item" onClick={() => {
-                                        window.scrollTo({
-                                            top: 0,
-                                            behavior: 'smooth'
-                                        });
-                                    }}>
-                                    <NavLink to="/history" activeClassName="ation"> Lịch sử cuộc thi </NavLink>
-                                </li>
                             </ul>
 
                         </div>
                     </div>
-
-                </div>
-                <div className="action">
-                    <a href="#" className="header__btn1">đăng ký</a>
-                    <a href="#" className="header__btn2">đăng nhập</a>
                 </div>
             </div>
         </header>

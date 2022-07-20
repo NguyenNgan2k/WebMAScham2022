@@ -1,0 +1,85 @@
+img .a_img {
+    width: 100%;
+    height: auto;
+}
+.banner_container {
+    position: relative;   
+    overflow: hidden;
+}
+.banner_content {
+    position: absolute;
+    top: 0px;
+    bottom: auto;
+    right: 50%;
+    text-align: center;
+    padding: 20px;
+    margin: 80px 0;
+    overflow: hidden;
+}
+.auth-action {
+    padding: 10px;
+    background-color: #f58220;
+    border-radius: 30px;
+    width: 230px;
+    margin-top: 5px;
+    display: inline-block;
+}
+.banner_btn1 {
+    text-decoration: none;
+    display: block;
+    color: #fff !important;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.banner-info {
+    font-style: italic;
+    font-size: 18px;
+    font-weight: bold;
+    color: #00427A;
+}
+.banner_contect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 0px;
+}
+.banner_phone {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 65px;
+}
+.banner_phone img {
+    margin-right: 17px;
+}
+.phone_ita {
+    font-style: italic;
+    font-size: 26px;
+    color: #000;
+}
+.phone_bold {
+    font-weight: bold;
+    font-size: 20px;
+    color: #f58220;
+}
+.banner_fb {
+    margin-right: 15px;
+}
+.banner_title {
+    color: #043b72;
+    font-weight: bold;
+    font-size: 20px;
+}
+img.a_img {
+    width: 100%;
+}
+img.banner_dec1 {
+    position: absolute;
+    top: -2px;
+    right: 0px;
+}
+img.banner_dec2 {
+    position: absolute;
+    top: 330px;
+}

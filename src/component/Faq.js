@@ -1,24 +1,31 @@
-import { NavLink, useParams } from 'react-router-dom';
-import '../css/faq.css';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 function Faq(props) {
-    const queryParams = new URLSearchParams(window.location.search)
-    const bnt = queryParams.get("bnt")
-    console.log(bnt)
+    const [bnt, setBnt] = useState(" ")
+    const handleChangeBnt = (params) => {
+        if (params === bnt) {
+            setBnt("")
+        } else {
+            setBnt(params)
+        }
+
+    }
+
     return (
         <section className="faq">
             <div className="container">
                 <h2 className="section_title">
-                    <span className="ora"> Các câu hỏi thường gặp MAScham </span>
+                    <span className="ora"> Các câu hỏi thường gặp</span>
                 </h2>
                 <div className="faq_wrap">
-                    <NavLink to="?bnt=1">
-                        <div className="faq_ques actBtn" >
-                            Tôi muốn đăng ký cuộc thi thì làm như thế nào?
-                        </div>
-                    </NavLink>
+
+                    <div className={"faq_ques " + (bnt === "1" ? "active_bnt" : "")} onClick={() => handleChangeBnt("1")}>
+                        Tôi muốn đăng ký cuộc thi thì làm như thế nào?
+                    </div>
+
                     {(bnt === '1') && <ul className="faq_ans">
                         <li>
-                            Bạn cần mở tài khoản chứng khoán ký quỹ (tiểu khoản M1) tại MAS
+                            Bạn cần mở tài khoản chứng khoán ký quỹ (tiểu khoản M1)
                             với tổng giá trị tài sản ròng tối thiểu 50 triệu VNĐ, sau đó bạn
                             có thể đăng nhập tài khoản giao dịch trực tuyến (web/app) hoặc
                             truy cập website masvn.com để đăng ký tham gia cuộc thi.
@@ -27,57 +34,57 @@ function Faq(props) {
 
                 </div>
                 <div className="faq_wrap">
-                    <NavLink to="?bnt=2">
-                        <div className="faq_ques actBtn">
-                            Tôi có thể đăng ký cuộc thi sau khi thời gian thi đấu bắt đầu không?
-                        </div>
-                    </NavLink>
+
+                    <div className={"faq_ques " + (bnt === "2" ? "active_bnt" : "")} onClick={() => handleChangeBnt("2")}>
+                        Tôi có thể đăng ký cuộc thi sau khi thời gian thi đấu bắt đầu không?
+                    </div>
+
                     {(bnt === '2') &&
                         <ul className="faq_ans">
                             <li>
                                 Thời gian đăng ký cuộc thi từ ngày 25/04 - 13/05/2022,
-                                sau thời gian này hệ thống sẽ đóng cổng đăng ký tham dự MAScham.
+                                sau thời gian này hệ thống sẽ đóng cổng đăng ký tham dự.
                                 Cuộc thi sẽ bắt đầu vào ngày 16/05/2022.
                             </li>
                         </ul>}
                 </div>
                 <div className="faq_wrap">
-                    <NavLink to="?bnt=3">
-                        <div className="faq_ques actBtn">
-                            Tôi có mất chi phí gì khi tham gia cuộc thi không?
-                        </div>
-                    </NavLink>
+
+                    <div className={"faq_ques " + (bnt === "3" ? "active_bnt" : "")} onClick={() => handleChangeBnt("3")}>
+                        Tôi có mất chi phí gì khi tham gia cuộc thi không?
+                    </div>
+
                     {(bnt === '3') && <ul className="faq_ans">
                         <li>
                             Thời gian đăng ký cuộc thi từ ngày 25/04 - 13/05/2022,
-                            sau thời gian này hệ thống sẽ đóng cổng đăng ký tham dự MAScham.
+                            sau thời gian này hệ thống sẽ đóng cổng đăng ký tham dự.
                             Cuộc thi sẽ bắt đầu vào ngày 16/05/2022.
                         </li>
                     </ul>}
 
                 </div>
                 <div className="faq_wrap">
-                    <NavLink to="?bnt=4">
-                        <div className="faq_ques actBtn">
-                            Tôi có thể lưu ký chứng khoán hoặc chuyển lưu ký chứng khoán sang
-                            MAS để tham gia cuộc thi hay không?
-                        </div>
-                    </NavLink>
+
+                    <div className={"faq_ques " + (bnt === "4" ? "active_bnt" : "")} onClick={() => handleChangeBnt("4")}>
+                        Tôi có thể lưu ký chứng khoán hoặc chuyển lưu ký chứng khoán sang
+                        để tham gia cuộc thi hay không?
+                    </div>
+
                     {(bnt === '4') &&
                         <ul className="faq_ans">
                             <li>
                                 Thời gian đăng ký cuộc thi từ ngày 25/04 - 13/05/2022,
-                                sau thời gian này hệ thống sẽ đóng cổng đăng ký tham dự MAScham.
+                                sau thời gian này hệ thống sẽ đóng cổng đăng ký tham dự.
                                 Cuộc thi sẽ bắt đầu vào ngày 16/05/2022.
                             </li>
                         </ul>}
                 </div>
                 <div className="faq_wrap">
-                    <NavLink to="?bnt=5">
-                        <div className="faq_ques actBtn">
-                            Tôi có thể nộp thêm tiền/rút tiền khi tham gia cuộc thi hay không?
-                        </div>
-                    </NavLink>
+
+                    <div className={"faq_ques " + (bnt === "5" ? "active_bnt" : "")} onClick={() => handleChangeBnt("5")}>
+                        Tôi có thể nộp thêm tiền/rút tiền khi tham gia cuộc thi hay không?
+                    </div>
+
                     {(bnt === '5') && <ul className="faq_ans">
                         <li>
                             Bạn có thể nộp thêm tiền/rút tiền trong khi tham gia cuộc thi, nhưng lưu ý,
@@ -88,12 +95,12 @@ function Faq(props) {
                     </ul>}
                 </div>
                 <div className="faq_wrap">
-                    <NavLink to="?bnt=6">
-                        <div className="faq_ques actBtn">
-                            Tôi có thể thực hiện giao dịch thỏa thuận khi tham gia cuộc thi
-                            hay không?
-                        </div>
-                    </NavLink>
+
+                    <div className={"faq_ques " + (bnt === "6" ? "active_bnt" : "")} onClick={() => handleChangeBnt("6")}>
+                        Tôi có thể thực hiện giao dịch thỏa thuận khi tham gia cuộc thi
+                        hay không?
+                    </div>
+
                     {(bnt === '6') && <ul className="faq_ans">
                         <li>
                             Giao dịch hợp lệ để xét giải phải là giao dịch khớp lệnh trực
@@ -112,11 +119,11 @@ function Faq(props) {
 
                 </div>
                 <div className="faq_wrap">
-                    <NavLink to="?bnt=7">
-                        <div className="faq_ques actBtn">
-                            Tôi có thể đăng ký cuộc thi sau khi thời gian thi đấu bắt đầu không?
-                        </div>
-                    </NavLink>
+
+                    <div className={"faq_ques " + (bnt === "7" ? "active_bnt" : "")} onClick={() => handleChangeBnt("7")}>
+                        Tôi có thể đăng ký cuộc thi sau khi thời gian thi đấu bắt đầu không?
+                    </div>
+
                     {(bnt === '7') &&
                         <ul className="faq_ans">
                             <li>
@@ -126,11 +133,11 @@ function Faq(props) {
                         </ul>}
                 </div>
                 <div className="faq_wrap">
-                    <NavLink to="?bnt=8">
-                        <div className="faq_ques actBtn">
-                            Bảng xếp hạng cuộc thi được xác định như thế nào?
-                        </div>
-                    </NavLink>
+
+                    <div className={"faq_ques " + (bnt === "8" ? "active_bnt" : "")} onClick={() => handleChangeBnt("8")} >
+                        Bảng xếp hạng cuộc thi được xác định như thế nào?
+                    </div>
+
                     {(bnt === '8') && <ul className="faq_ans">
                         <li>
                             Bảng xếp hạng cuộc thi được dựa trên hiệu suất lợi nhuận của tài
@@ -160,7 +167,7 @@ function Faq(props) {
                 </div>
                 <div className="faq_wrap">
                     <NavLink to="?bnt=9">
-                        <div className="faq_ques actBtn">
+                        <div className={"faq_ques " + (bnt === "9" ? "active_bnt" : "")} onClick={() => handleChangeBnt("9")}>
                             Tôi có cổ phiếu chuyển sàn hoặc hủy niêm yết, giá trị tài sản của
                             tôi sẽ ảnh hưởng như thế nào?
                         </div>
